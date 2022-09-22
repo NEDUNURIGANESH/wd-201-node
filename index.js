@@ -22,7 +22,7 @@ fs.readFile("registration.html",(err,registration)=>{
 });
 http.createServer((req,res)=>{
     let url=req.url;
-    res.writeHead(200,{"content-type":"type/html"});
+    res.writeHead(200,{"content-type":"text/html"});
     switch(url)
     {
         case "/project":
@@ -37,6 +37,4 @@ http.createServer((req,res)=>{
         res.end();
         break;
     }
-}).listen(args.port);
-
-
+}).listen(args["port"]);
